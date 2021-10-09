@@ -11,11 +11,11 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Enemy
+  - ChangingBlock
+  - Scenario
+  - Projectile
   - 
   - 
   - 
@@ -40,4 +40,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Scenario
+    uniqueID: 2134119537
+    locked: 0
+  - name: Projectile
+    uniqueID: 3564634511
+    locked: 0
+  - name: ChangingBlocks
+    uniqueID: 3394132653
+    locked: 0
+  - name: Enemy
+    uniqueID: 1900889097
+    locked: 0
+  - name: Player
+    uniqueID: 2977932763
     locked: 0

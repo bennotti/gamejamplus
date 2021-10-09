@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 2942227302140702093}
   - component: {fileID: 2942227302140702089}
   - component: {fileID: 2942227302140702094}
-  - component: {fileID: 2942227302140702095}
-  m_Layer: 0
+  - component: {fileID: 1604567058}
+  m_Layer: 7
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30,7 +30,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.75, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4691432194063339830}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -72,15 +73,15 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1900889097
+  m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a6cd4625d1a4f8e469a422f000ecbd8a, type: 3}
-  m_Color: {r: 0.8396226, g: 0.011881431, b: 0.011881431, a: 1}
+  m_Sprite: {fileID: 21300000, guid: a02ec537d8a02d545905721443796ca3, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.3333334, y: 1.3333334}
+  m_Size: {x: 0.52, y: 0.52}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -123,7 +124,7 @@ CapsuleCollider2D:
   m_Offset: {x: -0.018710017, y: 0.000000059604645}
   m_Size: {x: 0.786999, y: 1.0639082}
   m_Direction: 0
---- !u!114 &2942227302140702095
+--- !u!114 &1604567058
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -132,8 +133,40 @@ MonoBehaviour:
   m_GameObject: {fileID: 2942227302140699250}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b18a9dc0cdf98740a5533675423ff02, type: 3}
+  m_Script: {fileID: 11500000, guid: ceb5772415b778c4aaaac0142ebee1a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minMoveSpeed: 2
-  maxMoveSpeed: 5
+  minShootTime: 1
+  maxShootTime: 5
+  projectilePreFab: {fileID: 2803038919766231881, guid: 39de632e248d3e948a5f8f9d406a5b72, type: 3}
+  gun: {fileID: 6069693269045969479}
+--- !u!1 &6069693269045969479
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4691432194063339830}
+  m_Layer: 7
+  m_Name: Gun
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4691432194063339830
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6069693269045969479}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.41, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2942227302140702092}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
