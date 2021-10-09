@@ -105,8 +105,6 @@ public class PlayerMovement : MonoBehaviour
         { 
             isWalking = false;
         }
-     
-        
 
     }
 

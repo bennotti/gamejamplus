@@ -34,6 +34,7 @@ public class Enemy : MonoBehaviour
             yield return new WaitForSeconds(waitToShoot);
             GameObject newProjectile = Instantiate(projectilePreFab, transform.position, Quaternion.identity) as GameObject;
             newProjectile.transform.position = gun.transform.position;
+            newProjectile.transform.parent = gameObject.transform;
         }
     }
 
