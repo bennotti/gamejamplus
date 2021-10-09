@@ -25,7 +25,8 @@ public class DamageDealer : MonoBehaviour
         
         if (playerCollider)
         {
-           Destroy(gameObject);
+            Destroy(playerCollider.gameObject);
+            Destroy(gameObject);
             playerDead = true;
         }
     }
