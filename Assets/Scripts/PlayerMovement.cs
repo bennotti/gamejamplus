@@ -43,12 +43,22 @@ public class PlayerMovement : MonoBehaviour
 
     public Vector2 GetPlayerDirection()
     {
-        return moveInput;
+        return myRigidbody.velocity;
     }
 
     private void PlayerWalk()
     {
-        Vector2 playerVelocity = new Vector2(moveInput.x * moveSpeed, moveInput.y * moveSpeed);
+        Vector2 playerVelocity = new Vector2(0f,0f);
+        if (moveInput.x != 0)
+        {
+            playerVelocity = new Vector2(moveInput.x * moveSpeed, 0);
+        }
+
+        else if (moveInput.y != 0)
+        {
+            playerVelocity = new Vector2(0, moveInput.y * moveSpeed);
+        }
+
         myRigidbody.velocity = playerVelocity;
         SetWalkAnimation();
     }
