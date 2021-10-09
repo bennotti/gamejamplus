@@ -27,9 +27,14 @@ public class LevelLoader: MonoBehaviour
         SceneManager.LoadScene("MenuInicialScene");
     }
 
-    public void IrParaGameScene()
+    public void IrParaLevel1()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("Level1");
+    }
+
+    public void IrParaLevel2()
+    {
+        SceneManager.LoadScene("Level2");
     }
 
     public void IrParaOpcoes()
