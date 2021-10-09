@@ -14,11 +14,6 @@ public class Projectile : MonoBehaviour
     Rigidbody2D myRigidbody2D;
     Enemy enemy;
 
-    
-
-  
-
-
     void Start()
     {
         myRigidbody2D = GetComponent<Rigidbody2D>();
@@ -30,27 +25,34 @@ public class Projectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        myRigidbody2D.velocity = speed;
+        myRigidbody2D.velocity = new Vector2(shootDirection.x * projectileSpeed, shootDirection.y * projectileSpeed);
     }
 
     private void SetShootDirection()
     {
-        if (enemy.transform.rotation.z == 0)
-        {
-            shootDirection = new Vector2(0f, -1f);
-        }
-        else if (enemy.transform.rotation.z == 90)
+        
+        if (enemy.transform.rotation.eulerAngles.z == 0)
         {
             shootDirection = new Vector2(1f, 0f);
         }
-        else if (enemy.transform.rotation.z == 180)
+
+        else if (enemy.transform.rotation.eulerAngles.z == 90)
         {
             shootDirection = new Vector2(0f, 1f);
         }
-        else if (enemy.transform.rotation.z == 270)
+
+        else if (enemy.transform.rotation.eulerAngles.z == 180)
         {
             shootDirection = new Vector2(-1f, 0f);
         }
+
+        else if (enemy.transform.rotation.eulerAngles.z == 270)
+        {
+            shootDirection = new Vector2(0f, -1f);
+        }
+
+
+
     }
 
    
