@@ -17,7 +17,8 @@ public class Projectile : MonoBehaviour
     void Start()
     {
         myRigidbody2D = GetComponent<Rigidbody2D>();
-        enemy = FindObjectOfType<Enemy>();
+        //enemy = FindObjectOfType<Enemy>();
+        enemy = GetComponentInParent<Enemy>();
         SetShootDirection();
         speed = new Vector2(shootDirection.x * projectileSpeed, shootDirection.y * projectileSpeed);
     }
