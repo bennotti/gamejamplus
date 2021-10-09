@@ -14,9 +14,9 @@ TagManager:
   - Player
   - Enemy
   - ChangingBlock
-  - Scenario
+  - Wall
   - Projectile
-  - 
+  - Scenario
   - 
   - 
   - 

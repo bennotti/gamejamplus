@@ -36,19 +36,25 @@ public class ChangingBlock : MonoBehaviour
         if (currentBlockIndex == 0)
         {
             currentBlockIndex = 1;
-            mySpriteRenderer.sprite = changingBlocksSprites[currentBlockIndex];
+            SetBlock();
         }
 
         else if (currentBlockIndex == 1)
         {
             currentBlockIndex = 0;
-            mySpriteRenderer.sprite = changingBlocksSprites[currentBlockIndex];
+            SetBlock();
         }
     }
 
     private void SetBlock()
     {
         mySpriteRenderer.sprite = changingBlocksSprites[currentBlockIndex];
+    }
+
+
+    public int GetChangingBlockStatus()
+    {
+        return currentBlockIndex;
     }
 
 }
