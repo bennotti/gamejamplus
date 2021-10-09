@@ -6,6 +6,7 @@ public class DamageDealer : MonoBehaviour
 {
 
     bool playerDead;
+    [SerializeField] ParticleSystem deathVFXPrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -25,8 +26,10 @@ public class DamageDealer : MonoBehaviour
         
         if (playerCollider)
         {
+           Instantiate(deathVFXPrefab, playerCollider.transform.position, Quaternion.identity);
+           Destroy(playerCollider.gameObject);
            Destroy(gameObject);
-            playerDead = true;
+           playerDead = true;
         }
     }
 
