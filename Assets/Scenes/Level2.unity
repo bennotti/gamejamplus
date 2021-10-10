@@ -4245,6 +4245,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameOverCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 4615671397770280847, guid: 5a446c25122185143a785b0a83f15cc1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a446c25122185143a785b0a83f15cc1, type: 3}
 --- !u!1001 &1893824721

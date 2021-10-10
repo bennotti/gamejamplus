@@ -4022,6 +4022,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 323478701446564156, guid: 5d4f4cd5545daf24f865d863e21c55ae, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1766743874}
     - target: {fileID: 323478702060205588, guid: 5d4f4cd5545daf24f865d863e21c55ae, type: 3}
       propertyPath: m_Name
       value: VictoryCanvas
@@ -4252,6 +4256,14 @@ PrefabInstance:
     - target: {fileID: 4615671396292055515, guid: 5a446c25122185143a785b0a83f15cc1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LoadCurrentScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615671396658405922, guid: 5a446c25122185143a785b0a83f15cc1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1766743874}
+    - target: {fileID: 4615671396658405922, guid: 5a446c25122185143a785b0a83f15cc1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadStartScreen
       objectReference: {fileID: 0}
     - target: {fileID: 4615671397770280842, guid: 5a446c25122185143a785b0a83f15cc1, type: 3}
       propertyPath: m_Camera
