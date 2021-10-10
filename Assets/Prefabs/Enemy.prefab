@@ -124,6 +124,8 @@ MonoBehaviour:
   maxShootTime: 5
   projectilePreFab: {fileID: 2803038919766231881, guid: 39de632e248d3e948a5f8f9d406a5b72, type: 3}
   gun: {fileID: 6069693269045969479}
+  shootAFX: {fileID: 8300000, guid: 535168ba45094eb419ce52fe717948a8, type: 3}
+  shootAFXvolume: 0.5
 --- !u!61 &3986771939828289883
 BoxCollider2D:
   m_ObjectHideFlags: 0

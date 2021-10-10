@@ -5,11 +5,17 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
 
+    [Header("Projétil")]
     [SerializeField] float minShootTime = 1f;
     [SerializeField] float maxShootTime = 5f;
-    float waitToShoot;
     [SerializeField] GameObject projectilePreFab;
     [SerializeField] GameObject gun;
+
+    [Header("Efeito sonoro do tiro")]
+    [SerializeField] AudioClip shootAFX;
+    [SerializeField] float shootAFXvolume = 1f;
+    
+    float waitToShoot;
 
     bool shoot = true;
 
@@ -17,7 +23,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(Shoot());
+        StartCoroutine(ShootProjectile());
     }
 
     // Update is called once per frame
@@ -26,16 +32,22 @@ public class Enemy : MonoBehaviour
 
     }
 
-    IEnumerator Shoot()
+    IEnumerator ShootProjectile()
     {
         while (shoot)
         {
             waitToShoot = Random.Range(minShootTime, maxShootTime);
             yield return new WaitForSeconds(waitToShoot);
-            GameObject newProjectile = Instantiate(projectilePreFab, transform.position, Quaternion.identity) as GameObject;
-            newProjectile.transform.position = gun.transform.position;
-            newProjectile.transform.parent = gameObject.transform;
+            Fire();
         }
     }
 
+    private void Fire()
+    {
+        GameObject newProjectile = Instantiate(projectilePreFab, transform.position, Quaternion.identity) as GameObject;
+        newProjectile.transform.position = gun.transform.position;
+        newProjectile.transform.parent = gameObject.transform;
+        AudioSource.PlayClipAtPoint(shootAFX, Camera.main.transform.position, shootAFXvolume);
+
+    }
 }

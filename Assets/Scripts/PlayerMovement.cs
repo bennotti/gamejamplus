@@ -9,11 +9,13 @@ public class PlayerMovement : MonoBehaviour
     Vector2 moveInput;
     [SerializeField] float moveSpeed = 2f;
     bool isWalking;
-    
+    //[SerializeField] AudioClip stepAFX;
+    [Range(0,1)] [SerializeField]  float stepAFXVolume = 0.5f;
 
     //Cached references
     Rigidbody2D myRigidbody;
     Animator myAnimator;
+    AudioSource myAudioSource;
 
 
 
@@ -21,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     {
         myRigidbody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
+        myAudioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -28,13 +31,31 @@ public class PlayerMovement : MonoBehaviour
     {
         PlayerWalk();
         CheckWalk();
+        //PlayStepAFX();
+       
     }
 
     void OnMove(InputValue value)
     {
         moveInput = value.Get<Vector2>();
         isWalking = true;
+        
     }
+
+    private void PlayStepAFX()
+    {
+        if (myAnimator.speed == 0f)
+        {
+            return;
+        }
+
+        else if (myAnimator.speed == 1f && !myAudioSource.isPlaying)
+        {
+            myAudioSource.volume = stepAFXVolume;
+            myAudioSource.Play();
+        }
+    }
+
 
     public bool IsPlayerWalking()
     {
@@ -46,8 +67,11 @@ public class PlayerMovement : MonoBehaviour
         return myRigidbody.velocity;
     }
 
+    
+
     private void PlayerWalk()
     {
+              
         Vector2 playerVelocity = new Vector2(0f,0f);
         if (moveInput.x != 0)
         {
@@ -61,6 +85,7 @@ public class PlayerMovement : MonoBehaviour
 
         myRigidbody.velocity = playerVelocity;
         SetWalkAnimation();
+        PlayStepAFX();
     }
 
     private void SetWalkAnimation()
