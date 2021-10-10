@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minShootTime: 1
-  maxShootTime: 5
+  maxShootTime: 3
   projectilePreFab: {fileID: 2803038919766231881, guid: 39de632e248d3e948a5f8f9d406a5b72, type: 3}
   gun: {fileID: 6069693269045969479}
 --- !u!61 &3986771939828289883
