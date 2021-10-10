@@ -10,6 +10,7 @@ public class LevelLoader: MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1f;
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
     }
 

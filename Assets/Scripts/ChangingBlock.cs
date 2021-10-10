@@ -33,6 +33,11 @@ public class ChangingBlock : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
 
+        playerFeetCollider = other.GetComponent<BoxCollider2D>();
+
+        if (!other.isTrigger) { return; }
+
+
         if (currentBlockIndex == 0)
         {
             currentBlockIndex = 1;
