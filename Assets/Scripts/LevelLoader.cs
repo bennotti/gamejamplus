@@ -10,8 +10,9 @@ public class LevelLoader: MonoBehaviour
 
     private void Start()
     {
-        Time.timeScale = 1f;
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        Time.timeScale = 1f;
+        Debug.Log(currentSceneIndex);
     }
 
     public void LoadNextScene()
@@ -22,6 +23,8 @@ public class LevelLoader: MonoBehaviour
     public void LoadCurrentScene()
     {
         SceneManager.LoadScene(currentSceneIndex);
+        Debug.Log(currentSceneIndex);
+        Time.timeScale = 1f;
     }
     public void LoadStartScreen()
     {
@@ -36,6 +39,11 @@ public class LevelLoader: MonoBehaviour
     public void IrParaLevel2()
     {
         SceneManager.LoadScene("Level2");
+    }
+
+    public void IrParaLevel3()
+    {
+        SceneManager.LoadScene("Level3");
     }
 
     public void IrParaOpcoes()
