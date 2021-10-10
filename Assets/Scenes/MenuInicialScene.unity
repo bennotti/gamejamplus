@@ -554,7 +554,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2101120483}
         m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
-        m_MethodName: IrParaGameScene
+        m_MethodName: IrParaLevel1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
