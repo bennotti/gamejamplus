@@ -69,10 +69,10 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
-GameJamPlus2021_Data/Managed/
 MonoBleedingEdge/
 GameJamPlus2021.exe
 UnityCrashHandler64.exe
 UnityPlayer.dll
 Assets/TextMesh Pro/
 Nova pasta/
+GameJamPlus2021_Data/Managed/
