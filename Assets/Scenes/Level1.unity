@@ -3954,9 +3954,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 323478701305703168, guid: 5d4f4cd5545daf24f865d863e21c55ae, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 747
+      objectReference: {fileID: 0}
+    - target: {fileID: 323478701305703168, guid: 5d4f4cd5545daf24f865d863e21c55ae, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 420
+      objectReference: {fileID: 0}
+    - target: {fileID: 323478701305703168, guid: 5d4f4cd5545daf24f865d863e21c55ae, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000040054
+      objectReference: {fileID: 0}
+    - target: {fileID: 323478701305703168, guid: 5d4f4cd5545daf24f865d863e21c55ae, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 323478702060205588, guid: 5d4f4cd5545daf24f865d863e21c55ae, type: 3}
       propertyPath: m_Name
       value: VictoryCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 323478702060205588, guid: 5d4f4cd5545daf24f865d863e21c55ae, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 323478702060205592, guid: 5d4f4cd5545daf24f865d863e21c55ae, type: 3}
       propertyPath: m_Pivot.x
@@ -4173,6 +4193,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4615671396480902096, guid: 5a446c25122185143a785b0a83f15cc1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615671396480902097, guid: 5a446c25122185143a785b0a83f15cc1, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 747
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615671396480902097, guid: 5a446c25122185143a785b0a83f15cc1, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 420
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615671396480902097, guid: 5a446c25122185143a785b0a83f15cc1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000040054
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615671396480902097, guid: 5a446c25122185143a785b0a83f15cc1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4615671397770280842, guid: 5a446c25122185143a785b0a83f15cc1, type: 3}
       propertyPath: m_Camera
       value: 
