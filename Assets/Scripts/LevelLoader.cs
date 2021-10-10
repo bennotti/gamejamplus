@@ -12,18 +12,18 @@ public class LevelLoader: MonoBehaviour
     {
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         Time.timeScale = 1f;
-        Debug.Log(currentSceneIndex);
     }
 
     public void LoadNextScene()
     {
-        SceneManager.LoadScene(currentSceneIndex + 1);
+        int nextScene = currentSceneIndex + 1;
+        if (nextScene == 6) nextScene = 0;
+        SceneManager.LoadScene(nextScene);
     }
 
     public void LoadCurrentScene()
     {
         SceneManager.LoadScene(currentSceneIndex);
-        Debug.Log(currentSceneIndex);
         Time.timeScale = 1f;
     }
     public void LoadStartScreen()
