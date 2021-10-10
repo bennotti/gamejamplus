@@ -31,8 +31,7 @@ public class PlayerMovement : MonoBehaviour
     {
         PlayerWalk();
         CheckWalk();
-        //PlayStepAFX();
-       
+
     }
 
     void OnMove(InputValue value)
